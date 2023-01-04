@@ -1,0 +1,17 @@
+.btn1{
+    padding:0px 12px;
+    background-color: rgb(244, 130, 23);
+    width: 100px;
+    height: 40px;
+    margin-top: 30px;
+    border: none;
+    border-radius: 25px;
+    color: aliceblue;
+    font-size: 18px;
+ 
+    
+}
+.btn1:hover{
+    box-shadow: 3px 3px 7px  rgb(240, 198, 159),
+    3px 3px 7px  rgb(234, 136, 45);
+}
