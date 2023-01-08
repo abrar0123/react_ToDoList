@@ -1,17 +1,62 @@
-.btn1{
-    padding:0px 12px;
-    background-color: rgb(244, 130, 23);
-    width: 100px;
-    height: 40px;
-    margin-top: 30px;
-    border: none;
-    border-radius: 25px;
-    color: aliceblue;
-    font-size: 18px;
- 
-    
+.btn1 {
+  padding: 0px 12px;
+  background-color: rgb(244, 130, 23);
+  width: 100px;
+  height: 40px;
+  margin-top: 30px;
+  border: none;
+  border-radius: 6px;
+  color: aliceblue;
+  font-size: 18px;
+  font-weight: 600;
+  width: 140px;
 }
-.btn1:hover{
-    box-shadow: 3px 3px 7px  rgb(240, 198, 159),
-    3px 3px 7px  rgb(234, 136, 45);
+.btn1:hover {
+  box-shadow: 3px 3px 7px rgb(240, 198, 159), 3px 3px 7px rgb(234, 136, 45);
+}
+.movieflex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 14px;
+  /* margin-top: 20px; */
+}
+.moviediv {
+  padding: 20px;
+  /* margin: 10px; */
+  background-color: aliceblue;
+  box-shadow: 7px 7px 10px rgb(185, 186, 186), 7px 7px 10px rgb(222, 233, 243);
+  color: black;
+  border-radius: 10px;
+
+  /* width: 300px; */
+  /* float: left; */
+}
+.movieheader {
+  /* width: 300px; */
+  height: 130px;
+  background-color: aliceblue;
+  box-shadow: 7px 7px 10px rgb(185, 186, 186), 7px 7px 10px rgb(222, 233, 243);
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  padding-top: 30px;
+  margin-top: 50px;
+}
+.movieheader h1 {
+  font-size: 55px;
+  color: rgb(16, 240, 240);
+}
+.movieimg {
+  width: 200px;
+  height: 300px;
+  border-radius: 10px;
+  padding-bottom: 10px;
+}
+.moviep {
+  font-size: 22px;
+  font-weight: 600;
+  width: 200px;
+  text-align: center;
 }
