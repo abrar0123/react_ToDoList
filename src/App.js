@@ -4,10 +4,9 @@ import ProductList from "./Components/Productlist.js";
 import Footer from "./Components/Footer.js";
 import React, { useState } from "react";
 import AddItem from "./Components/AddItem";
-
+import Movies from "./Components/Movies";
 function App() {
-
-  const a =<h1> My New Journey is Start </h1>
+  const a = <h1> Metaphor Todo List Task </h1>;
   // components
   const Products = [
     // we creates an array from collection of objects
@@ -90,15 +89,12 @@ function App() {
   };
   return (
     <>
-    
       <Navbar />
       <AddItem addItem={addItem} />
 
-     
       <main className="container mt-5">
-      
-      <div style={{textAlign:"center",paddingBottom:"20px"}}> {a}</div>
-      
+        <div style={{ textAlign: "center", paddingBottom: "20px" }}> {a}</div>
+
         <ProductList
           productList={productList}
           incquntity={incquntity1}
@@ -106,7 +102,9 @@ function App() {
           removeItem={removeItem}
         />
       </main>
+
       <Footer totalamount={totalamount} resetquant={resetquant} />
+      {/* <Movies /> */}
     </>
   );
 }
