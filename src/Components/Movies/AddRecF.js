@@ -17,13 +17,16 @@ const tools = [
     purpose: "Military Reserach",
   },
 ];
+const getdata = JSON.parse(localStorage.getItem("keycode201"), tools);
 const AddRecF = () => {
-  const [addtool, setaddtool] = useState(tools);
+  const [addtool, setaddtool] = useState(getdata);
   const [tname, settname] = useState();
   const [price, setprice] = useState();
   // const purpose = "for research";
   let id = 10;
-
+  useEffect(() => {
+    localStorage.setItem("keycode201", JSON.stringify(addtool));
+  }, [addtool]);
   const addrecord = (a, b) => {
     // try {
     //   setaddtool({ tname, price, purpose, id });
@@ -68,7 +71,7 @@ const AddRecF = () => {
   }, [tname]);
   const handeldom = () => {
     // domAccess.current.focus();
-    domAccess.current.value = "dgt record";
+    // domAccess.current.value = "dgt record";
     domAccess.current.style.color = "green";
     domAccess.current.style.backgroundColor = "white";
   };
@@ -103,6 +106,7 @@ const AddRecF = () => {
             name="toolname"
             id=""
             value={tname}
+            placeholder="Enter Tool Name"
             onChange={(e) => settname(e.target.value)}
           />
 
@@ -113,6 +117,7 @@ const AddRecF = () => {
             name="toolprice"
             onCopy={() => alert("text copied")}
             id=""
+            placeholder="Enter Tool Price"
             value={price}
             onChange={(e) => setprice(e.target.value)}
           />
@@ -125,9 +130,9 @@ const AddRecF = () => {
           >
             Add Record
           </button>
-          <button className="btn2" onClick={handeldom}>
+          {/* <button className="btn2" onClick={handeldom}>
             UseRef
-          </button>
+          </button> */}
         </div>
       </form>
       <div className="fcflex">

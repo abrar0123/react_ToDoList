@@ -2,16 +2,22 @@
   padding: 0px 12px;
   background-color: rgb(244, 130, 23);
   width: 235px;
-  height: 40px;
-  /* margin-top: 30px; */
+  height: 45px;
+  margin-top: 20px;
   border: none;
   border-radius: 6px;
   color: aliceblue;
   font-size: 18px;
   font-weight: 600;
+  margin-bottom: 20px;
 }
 .btn2:hover {
-  box-shadow: 3px 3px 7px rgb(240, 198, 159), 3px 3px 7px rgb(234, 136, 45);
+  background-color: white;
+  border: 1px solid rgb(129, 129, 129);
+  color: black;
+  transition-duration: 0.3s;
+  box-shadow: 3px 3px 7px rgb(244, 235, 227), 3px 3px 7px rgb(116, 113, 110);
+
 }
 .fcflex {
   display: flex;
@@ -65,14 +71,16 @@
   text-align: center;
 }
 input {
-  margin: 20px;
+  margin: 15px;
   font-size: 18px;
   font-weight: 500;
   border: 1px solid rgb(201, 187, 185);
   background-color: aliceblue;
-  height: 50px;
+  height: 45px;
+  border-radius: 5px;
 }
-.fcdiv1{
+
+.fcdiv1 {
   padding: 20px;
   margin: 20px;
   background-color: rgb(181, 213, 241);
@@ -97,7 +105,7 @@ input {
   .movieheader h1 {
     font-size: 45px;
   }
-  .addrecdiv{
+  .addrecdiv {
     flex-direction: column;
   }
 }
