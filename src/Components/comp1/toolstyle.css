@@ -1,0 +1,103 @@
+.btn2 {
+  padding: 0px 12px;
+  background-color: rgb(244, 130, 23);
+  width: 235px;
+  height: 40px;
+  /* margin-top: 30px; */
+  border: none;
+  border-radius: 6px;
+  color: aliceblue;
+  font-size: 18px;
+  font-weight: 600;
+}
+.btn2:hover {
+  box-shadow: 3px 3px 7px rgb(240, 198, 159), 3px 3px 7px rgb(234, 136, 45);
+}
+.fcflex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  padding: 14px;
+  margin-bottom: 50px;
+
+  /* margin-top: 20px; */
+}
+.fcdiv {
+  padding: 20px;
+  margin: 20px;
+  background-color: aliceblue;
+  box-shadow: 7px 7px 10px rgb(185, 186, 186), 7px 7px 10px rgb(222, 233, 243);
+  color: #000000;
+  height: 90px;
+  width: 600px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* width: 300px; */
+  /* float: left; */
+}
+.fcheader {
+  /* width: 300px; */
+  height: 130px;
+  background-color: aliceblue;
+  box-shadow: 7px 7px 10px rgb(185, 186, 186), 7px 7px 10px rgb(222, 233, 243);
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  padding-top: 30px;
+  margin-top: 50px;
+}
+.fcheader h1 {
+  font-size: 55px;
+  color: rgb(16, 240, 240);
+}
+
+.fcp {
+  font-size: 18px;
+  font-weight: 600;
+  width: 500px;
+  text-align: center;
+}
+input {
+  margin: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  border: 1px solid rgb(201, 187, 185);
+  background-color: aliceblue;
+  height: 50px;
+}
+.fcdiv1{
+  padding: 20px;
+  margin: 20px;
+  background-color: rgb(181, 213, 241);
+  box-shadow: 7px 7px 10px rgb(185, 186, 186), 7px 7px 10px rgb(222, 233, 243);
+  color: #000000;
+  height: 90px;
+  width: 600px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.addrecdiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+@media (max-width: 700px) {
+  .movieheader h1 {
+    font-size: 45px;
+  }
+  .addrecdiv{
+    flex-direction: column;
+  }
+}

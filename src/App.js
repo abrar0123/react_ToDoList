@@ -4,30 +4,38 @@ import ProductList from "./Components/Productlist.js";
 import Footer from "./Components/Footer.js";
 import React, { useState } from "react";
 import AddItem from "./Components/AddItem";
-import Movies from "./Components/Movies";
+import { createContext } from "react";
+import Acomp from "./Components/comp1/contextcomp/Acomp";
+import Error from "./Components/comp1/error";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import AddRecF from "./Components/Movies/AddRecF";
+import ReactApi from "./Components/reactapi/ReactApi";
+const AppState = createContext();
+const AppState1 = createContext();
+
 function App() {
-  const a = <h1> Metaphor Todo List Task </h1>;
+  // const a = <h1> Metaphor Todo List Task </h1>;
   // components
   const Products = [
     // we creates an array from collection of objects
     {
-      price: 9999,
-      name: "Iphone 13 pro ",
-      quantity: 0,
-    },
-    {
-      price: 9999,
-      name: "Iphone 14 pro ",
+      price: 22300,
+      name: "Vivo Y90 ",
       quantity: 0,
     },
     {
       price: 32500,
-      name: "Vivo S1     \t",
+      name: "Vivo S1 ",
       quantity: 0,
     },
     {
-      price: 2000,
-      name: "Sqlite Course ",
+      price: 37500,
+      name: "Galaxy S9 ",
+      quantity: 0,
+    },
+    {
+      price: 45200,
+      name: "Reno Pro ",
       quantity: 0,
     },
   ];
@@ -59,7 +67,7 @@ function App() {
     setProductList(nplist);
     settotalamount(0);
   };
-  const dquntity1 = (ind) => {
+  const dec_quantity = (ind) => {
     let newproductlist = [...productList]; // spread fun > get  combine > array
     let ntotalamount = totalamount;
     if (newproductlist[ind].quantity > 0) {
@@ -87,26 +95,62 @@ function App() {
     setProductList(newProductList);
     settotalamount(ntotalamount);
   };
+  const pop = "web developer ";
+  const pop1 = "software  developer ";
+
   return (
     <>
-      <Navbar />
-      <AddItem addItem={addItem} />
+      <AppState.Provider value={incquntity1}>
+        <AppState1.Provider value={dec_quantity}>
+          <Router>
+            {/* navbar page 1 */}
+            <Navbar />
 
-      <main className="container mt-5">
-        <div style={{ textAlign: "center", paddingBottom: "20px" }}> {a}</div>
+            {/* additem page 2*/}
 
-        <ProductList
-          productList={productList}
-          incquntity={incquntity1}
-          dquntity={dquntity1}
-          removeItem={removeItem}
-        />
-      </main>
+            <Routes>
+              <Route path="/n" element={<AddItem addItem={addItem} />} />
+              <Route path="/api" element={<ReactApi />} />
 
-      <Footer totalamount={totalamount} resetquant={resetquant} />
-      {/* <Movies /> */}
+              <Route path="/ResearchTools" element={<AddRecF />} />
+
+              {/* <main className="container mt-5"> */}
+              <Route
+                path="/plist"
+                element={
+                  <ProductList
+                    productList={productList}
+                    incquntity={incquntity1}
+                    // dquntity={dquntity1}
+                    removeItem={removeItem}
+                  />
+                }
+              />
+
+              {/* <div style={{ textAlign: "center", paddingBottom: "20px"}}> {a}</div> */}
+
+              {/* productslist page 3 */}
+
+              {/* </main> */}
+              <Route path="*" element={<Error />} />
+              <Route path="/m" element={<Acomp />} />
+
+              <Route
+                path="/add"
+                element={
+                  <Footer totalamount={totalamount} resetquant={resetquant} />
+                }
+              />
+              {/* footer page 4 more pages */}
+            </Routes>
+          </Router>
+        </AppState1.Provider>
+      </AppState.Provider>
+      ;
     </>
   );
 }
 
 export default App; // use in another files
+export { AppState };
+export { AppState1 };

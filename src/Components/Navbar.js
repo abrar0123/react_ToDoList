@@ -1,5 +1,6 @@
 import React from "react";
 import MovieMap from "./MovieMap";
+import { Link } from "react-router-dom";
 class Navbar extends React.Component {
   state = {};
   render() {
@@ -9,9 +10,10 @@ class Navbar extends React.Component {
         <div className="awesome" style={{ border: "1px solid red" }}>
           <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container-fluid">
-              <a className="navbar-brand" href="./Movies.js">
-                Metaphhor ToDo List
-              </a>
+              <Link to={"/n"}>
+                <a className="navbar-brand">Metaphhor Project</a>
+              </Link>
+
               <button
                 className="navbar-toggler"
                 type="button"
@@ -28,20 +30,46 @@ class Navbar extends React.Component {
                 id="navbarSupportedContent"
               >
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li className="nav-item">
-                    <a
-                      className="nav-link active"
-                      aria-current="page"
-                      href="./MovieMap.js"
-                    >
-                      Home
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link" href="#">
-                      Link
-                    </a>
-                  </li>
+                  <Link to={"/add"}>
+                    <li className="nav-item">
+                      <a
+                        style={{ textDecorationColor: "green" }}
+                        className="nav-link active"
+                        aria-current="page"
+                        href="#"
+                      >
+                        Movies
+                      </a>
+                    </li>
+                  </Link>
+                  <Link to={"/api"}>
+                    <li className="nav-item">
+                      <a
+                        style={{ textDecorationColor: "green" }}
+                        className="nav-link active"
+                        aria-current="page"
+                        href="#"
+                      >
+                        Api data
+                      </a>
+                    </li>
+                  </Link>
+                  <Link to={"/plist"}>
+                    <li className="nav-item">
+                      <a className="nav-link" href="#">
+                        Mobiles
+                      </a>
+                    </li>
+                  </Link>
+
+                  <Link to={"/ResearchTools"}>
+                    <li className="nav-item">
+                      <a className="nav-link" href="#">
+                        ResearchTools
+                      </a>
+                    </li>
+                  </Link>
+
                   <li className="nav-item dropdown">
                     <a
                       className="nav-link dropdown-toggle"
@@ -53,11 +81,14 @@ class Navbar extends React.Component {
                       Dropdown
                     </a>
                     <ul className="dropdown-menu">
-                      <li>
-                        <a className="dropdown-item" href="#">
-                          Action
-                        </a>
-                      </li>
+                      <Link to={"/m"}>
+                        <li>
+                          <a className="dropdown-item" href="#">
+                            Context
+                          </a>
+                        </li>
+                      </Link>
+
                       <li>
                         <a className="dropdown-item" href="#">
                           Another action
@@ -74,7 +105,9 @@ class Navbar extends React.Component {
                     </ul>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link disabled">Disabled</a>
+                    <a className="nav-link disabled" href="#">
+                      Disabled
+                    </a>
                   </li>
                 </ul>
                 <form className="d-flex" role="search">

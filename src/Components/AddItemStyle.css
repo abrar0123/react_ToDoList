@@ -3,13 +3,20 @@
   background-color: rgb(244, 130, 23);
   width: 100px;
   height: 40px;
-  margin-top: 30px;
   border: none;
   border-radius: 6px;
   color: aliceblue;
   font-size: 18px;
   font-weight: 600;
+  margin-top: 55px;
   width: 140px;
+  margin-left: 20px;
+}
+.productstyle {
+  background-color: aliceblue;
+  box-shadow: 7px 7px 10px rgb(185, 186, 186), 7px 7px 10px rgb(222, 233, 243);
+
+  padding: 20px;
 }
 .btn1:hover {
   box-shadow: 3px 3px 7px rgb(240, 198, 159), 3px 3px 7px rgb(234, 136, 45);
@@ -28,7 +35,9 @@
   background-color: aliceblue;
   box-shadow: 7px 7px 10px rgb(185, 186, 186), 7px 7px 10px rgb(222, 233, 243);
   color: black;
+  height: 465px;
   border-radius: 10px;
+  margin-bottom: 10px;
 
   /* width: 300px; */
   /* float: left; */
@@ -59,4 +68,10 @@
   font-weight: 600;
   width: 200px;
   text-align: center;
+}
+@media (max-width: 700px) {
+  .movieheader h1 {
+    font-size: 45px;
+  }
+  
 }

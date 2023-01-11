@@ -14,6 +14,7 @@ export default function MovieMap() {
         {movie.map((element) => {
           return (
             <Movies
+              key={element.imdbID}
               title={element.Title}
               year={element.Year}
               Poster={element.Poster}

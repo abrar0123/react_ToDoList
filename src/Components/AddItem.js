@@ -58,6 +58,7 @@ class AddItem extends React.Component {
               className="form-control"
               id="price"
               name="productPrice"
+              placeholder="Enter price"
               onChange={(e) => {
                 this.setState({ productPrice: e.currentTarget.value });
               }}
@@ -70,21 +71,6 @@ class AddItem extends React.Component {
             Insert
           </button>
         </form>
-        {/* <button type="submit" className="btn btn-danger " onClick={
-        ()=>{
-          this.setState({header: !this.state.header})
-          // 1st true , 2 false
-        }
-      }
-      >
-        {this.state.header ? (
-          
-           <h4 style={{marginLeft:50}}> Metaphor website created...</h4>
-        ) : (
-          <h4>My Time Table is Change Rigte Now </h4>
-        )}
-      {this.state.header}
-    </button> */}
       </>
     );
   }
